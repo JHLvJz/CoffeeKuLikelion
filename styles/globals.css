@@ -1,26 +1,19 @@
-html,
+/* ./styles/globals.css */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* 여기 정의한 css가 계속 안 먹는 문제 발생 */
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+    position: relative;
+    overflow-y: hidden;
+    padding: 0;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+    font-family: -apple-system, InkLipquid, sans-serif;
   }
-  body {
-    color: white;
-    background: black;
+  
+  @font-face {
+    font-family: "InkLipquid";
+    font-weight: 200;
+    src: url("/fonts/InkLipquidFonts.ttf") format("truetype");
   }
-}
