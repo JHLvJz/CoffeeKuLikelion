@@ -4,14 +4,41 @@ import Text from "../../styles/text/Text";
 import OrderButtonBox from "../../components/Order/OrderBox";
 import OrderText from "../../components/Order/OrderText";
 import MenuBoard from "../../components/Order/MenuBoard";
+import ShadowBox from "../../styles/boxlayout/ShadowBox";
+
+const Icon = styled.img`
+    width: 17px;
+    height: 17px;
+    position: absolute;
+
+    top: 30px;
+    left: ${props => props.left};
+    right: ${props => props.right};
+`;
 
 function MenuList() {
+
+        const cafename = '카페 C';
+
         return(
             <>
+                <ShadowBox height="95px">
+                    <div>
+                        <p style={{ textAlign: 'center', fontSize: '20px', fontWeight: '600'}}>주문하기</p>
+                        <div style={{ display: 'flex', justifyContent: 'center'}}>
+                            <span>마이 루틴&nbsp;</span> 
+                            <span style={{ fontWeight: '600' }}>{cafename}</span>
+                            <span>&nbsp;의 메뉴입니다</span>
+                        </div>
+                    </div>
+                </ShadowBox>
+                <Icon src="/images/backarrow.png" left="15px"/>
+                <Icon src="/images/cart.png" right="20px"/>
                 <MenuBoard />
-                <Text size="20px" weight="600" color="black" top="585px" left="30px">현재 잔액</Text>
-                <Text size="20px" weight="600" color="#9E6027" top="585px" left="350px">4500원</Text>
-                <OrderButtonBox top="180px">
+                {/* 여기 MenuBoard에서 hydration error나고 있음 */}
+                <Text size="20px" weight="600" color="black" top="660px" left="30px">현재 잔액</Text>
+                <Text size="20px" weight="600" color="#9E6027" top="660px" left="330px">4500원</Text>
+                <OrderButtonBox top="260px">
                     <OrderText>주문하기</OrderText>
                 </OrderButtonBox>
             </>

@@ -8,7 +8,7 @@ const OrderButtonBox = styled.div`
     width: 326px;
     height: 43px;
     
-    top: 115px;
+    top: 180px;
     left: 50%; transform: translate(-50%, -50%); 
 
     background: #9E6027;

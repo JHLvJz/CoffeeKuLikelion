@@ -22,11 +22,11 @@ function Cafeinfo({ left }) {
         <Wrapper>
             <CafeImg src="/images/cafe1.png" />
             <CafeTitle cafename="카페 C" cafeinfo="블렌디드와 수박주스가 맛있는 카페"/>
-            <MiddleBar top="75px"/>
+            <MiddleBar top="100px"/>
             <CafeDetail time="월화수목금토일 10:00 - 20:00" holiday="없음" phoneNum="02-어쩌구-저쩌구" address="대충 성북구"/>
-            <MiddleBar top="20px" />
-            <Text size="20px" weight="600" color="black" top="585px" left="30px">현재 잔액</Text>
-            <Text size="20px" weight="600" color="#9E6027" top="585px" left="350px">4500원</Text>
+            <MiddleBar top="60px" />
+            <Text size="20px" weight="600" color="black" top="630px" left="30px">현재 잔액</Text>
+            <Text size="20px" weight="600" color="#9E6027" top="630px" left="330px">4500원</Text>
             <OrderButton/>
         </Wrapper>
     );

@@ -1,5 +1,3 @@
-function Coffee() {
-    return(<p>나는 커피야</p>);
-}
+import MenuList from "./menu";
 
-export default Coffee;
+export default MenuList;

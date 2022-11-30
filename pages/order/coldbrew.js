@@ -1,5 +1,3 @@
-function Coldbrew() {
-    return(<p>나는 콜드브루야</p>);
-}
+import MenuList from "./menu";
 
-export default Coldbrew;
+export default MenuList;

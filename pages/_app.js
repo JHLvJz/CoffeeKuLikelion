@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import styled from "styled-components"
 import Wrapper from '../styles/boxlayout/Wrapper.js';
 

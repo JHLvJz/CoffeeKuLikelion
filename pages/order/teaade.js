@@ -1,5 +1,3 @@
-function Teaade() {
-    return(<p>나는 티야</p>);
-}
+import MenuList from "./menu";
 
-export default Teaade;
+export default MenuList;

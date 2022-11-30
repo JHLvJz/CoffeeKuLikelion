@@ -21,13 +21,13 @@ const TextMenu = styled.p`
 function CafeDetail ({ time, holiday, phoneNum, address }) {
     return (
         <>
-            <InfoMenu top="100px"left="30px">
+            <InfoMenu top="125px"left="30px">
                 <TextMenu>영업시간</TextMenu>
                 <TextMenu>휴무일</TextMenu>
                 <TextMenu>전화번호</TextMenu>
                 <TextMenu>주소</TextMenu>
             </InfoMenu>
-            <InfoMenu left="120px">
+            <InfoMenu top="25px" left="120px">
                 <TextMenu color="black">{time}</TextMenu>
                 <TextMenu color="black">{holiday}</TextMenu>
                 <TextMenu color="black">{phoneNum}</TextMenu>

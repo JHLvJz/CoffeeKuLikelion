@@ -1,5 +1,3 @@
-function Noncoffee() {
-    return(<p>나는 논커피야</p>);
-}
+import MenuList from "./menu";
 
-export default Noncoffee;
+export default MenuList;
