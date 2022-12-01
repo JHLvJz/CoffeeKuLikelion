@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useRouter } from "next/router";
+
 import OrderButton from "../../components/Order/OrderButton";
 import Text from "../../styles/text/Text";
 import OrderButtonBox from "../../components/Order/OrderBox";
@@ -17,6 +19,10 @@ const Icon = styled.img`
 `;
 
 function MenuList() {
+        const router =  useRouter();
+        const onClickHandler = () => {
+            router.push('/');
+        };
 
         const cafename = '카페 C';
 
@@ -32,7 +38,7 @@ function MenuList() {
                         </div>
                     </div>
                 </ShadowBox>
-                <Icon src="/images/backarrow.png" left="15px"/>
+                <Icon onClick={onClickHandler} src="/images/backarrow.png" left="15px"/>
                 <Icon src="/images/cart.png" right="20px"/>
                 <MenuBoard />
                 {/* 여기 MenuBoard에서 hydration error나고 있음 */}

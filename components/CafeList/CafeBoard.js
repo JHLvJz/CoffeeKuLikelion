@@ -1,8 +1,11 @@
 import styled from "styled-components";
+import { useRouter } from "next/router";
+
 import CafeItem from "./CafeItem";
 import Container from "../../styles/boxlayout/Container";
 
 function CafeBoard() {
+
     return (
         <Container>
             <CafeItem cafename="카페제이" cafeinfo="아인슈페너와 테린느가 맛있는 카페"/>

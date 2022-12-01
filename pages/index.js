@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import CafeBoard from '../components/CafeList/CafeBoard';
 import NavBar from '../components/Bar/NavBar';
 import TopCafeBoard from '../components/ChargeBox/TopCafeBoard';

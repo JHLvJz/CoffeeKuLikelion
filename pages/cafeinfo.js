@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import CafeDetail from "../styles/text/CafeDetail";
 import CafeTitle from "../styles/text/CafeTitle";
 import Wrapper from "../styles/boxlayout/Wrapper";
@@ -18,6 +19,7 @@ const MiddleBar = styled.div`
 `;
 
 function Cafeinfo({ left }) {
+
     return (
         <Wrapper>
             <CafeImg src="/images/cafe1.png" />
@@ -27,7 +29,7 @@ function Cafeinfo({ left }) {
             <MiddleBar top="60px" />
             <Text size="20px" weight="600" color="black" top="630px" left="30px">현재 잔액</Text>
             <Text size="20px" weight="600" color="#9E6027" top="630px" left="330px">4500원</Text>
-            <OrderButton/>
+            <OrderButton urlpath="/order/menu"/>
         </Wrapper>
     );
 }

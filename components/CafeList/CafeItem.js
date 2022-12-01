@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useRouter } from "next/router";
+
 import CafeName from  "./CafeName";
 import CafeInfo from "./CafeInfo";
 import Arrow from "../../styles/Arrow";
@@ -41,11 +43,18 @@ const CafeBox = styled.div`
 `
 
 function CafeItem ({ cafename, cafeinfo }) {
+    //여긴 나중에 경로 변수화 비동기로
+    const router =  useRouter();
+        const onClickHandler = () => {
+            router.push('/cafeinfo');
+        };
+
+
     return(
         <CafeBox>
             <CafeName>
                 {cafename}
-                <Arrow src="/images/arrow.png" />
+                <Arrow onClick={onClickHandler} src="/images/arrow.png" />
             </CafeName>
             <DollarIcon src="/images/cafeDollar.png"/>
             <CafeInfo>{cafeinfo}</CafeInfo>

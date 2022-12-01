@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import FirstCafe from "./FirstCafe";
 import OtherCafe from "./OtherCafe";
 import SecondCafe from "./SecondCafe";
@@ -9,6 +10,7 @@ const LeftBoard = styled.div`
 `;
 
 function TopCafeBoard () {
+
     return(
         <LeftBoard>
             <FirstCafe left="4500" cafename="카페제이"/>

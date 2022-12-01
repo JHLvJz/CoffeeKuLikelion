@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useRouter } from "next/router";
+
 import ShadowBox from "../../styles/boxlayout/ShadowBox";
 import Text from "../../styles/text/Text";
 import OrderButtonBox from "../../components/Order/OrderBox";
@@ -37,13 +39,18 @@ const Card = styled.img`
 `
 
 function Charge() {
+    const router =  useRouter();
+    const onClickHandler = () => {
+        router.push('/order/menu');
+    };
+    
         let cafename = '카페 C';
         let left = 4500
 
         return(
             <>
                 <ShadowBox height="380px" style={{ display: 'flex', justifyContent: 'center'}}>
-                    <Icon src="/images/backarrow.png"></Icon>
+                    <Icon onClick={onClickHandler} src="/images/backarrow.png"></Icon>
                     {/* 여기 픽셀 고친 거 다 바꿔야함 */}
                     <Text size="18px" weight="600" top="20px" left="180px" color="black">충전하기</Text>
                     <Card src="/images/cardExample.png" />
@@ -56,7 +63,8 @@ function Charge() {
                 </ShadowBox>
                 <ShadowBox height="125px" style={{ top: '387px', }}>
                     <Text size="18px" weight="600" left="20px" color="black">충전금액</Text> 
-                    <ButtonDict />
+                    <ButtonDict >
+                    </ButtonDict>
                 </ShadowBox>
                 <ShadowBox height="180px" style={{ top: '530px', }}>
                     <Text size="18px" weight="600" left="20px" color="black">결제수단</Text> 

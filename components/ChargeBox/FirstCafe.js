@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useRouter } from "next/router";
+
 import Text from "../../styles/text/Text";
 
 const FirstCafeBox = styled.div`
@@ -16,8 +18,14 @@ const FirstCafeBox = styled.div`
 `;
 
 function FirstCafe({ left, cafename }) {
+
+    const router = useRouter();
+    const onClickHandler = (path) => {
+        router.push(path);
+    };
+
     return(
-        <FirstCafeBox>
+        <FirstCafeBox onClick={() => {onClickHandler('/order/charge');}}>
             <Text size="30px" weight="600" top="0px" left="20px">{left}원</Text>
             <Text size="15px" weight="400" top="55px" left="20px">{cafename}</Text>
             <Text size="12px" weight="600" top="180px" left="150px">충전하기</Text>

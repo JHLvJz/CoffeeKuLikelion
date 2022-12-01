@@ -1,4 +1,6 @@
 import { SERVER_PROPS_ID } from "next/dist/shared/lib/constants";
+import { useRouter } from "next/router";
+
 import styled from "styled-components";
 
 const OrderButtonBox = styled.div`
@@ -11,10 +13,10 @@ const OrderButtonBox = styled.div`
     top: 180px;
     left: 50%; transform: translate(-50%, -50%); 
 
-    background: #9E6027;
+    // background-color: ${props => props.isSelect ? '#9E6027' : '#9E602785'};
+    background-color: '#9E6027';
     border-radius: 20px;
 `;
-
 const OrderText = styled.p`
     position: absolute;
     text-align: center;
@@ -27,9 +29,14 @@ const OrderText = styled.p`
 
 `;
 
-function OrderButton () {
+function OrderButton ({ urlpath }) {
+    const router =  useRouter();
+    const onClickHandler = () => {
+        router.push(urlpath);
+    };
+
     return(
-        <OrderButtonBox>
+        <OrderButtonBox onClick={onClickHandler}>
             <OrderText>주문하기</OrderText>
         </OrderButtonBox>
 
