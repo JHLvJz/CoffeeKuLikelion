@@ -16,9 +16,9 @@ const Navbar  = styled.nav`
 function NavBar () {
     return(
         <Navbar style={{ display: 'flex', justifyContent: 'space-around'}}>
-            <BarItem icontype="충전하기" imgpath="/images/dollar.png"/>
+            <BarItem urlpath='/order/charge' icontype="충전하기" imgpath="/images/dollar.png"/>
             <BarItem icontype="루틴 변경" imgpath="/images/settings.png"/>
-            <BarItem icontype="주문 내역" imgpath="/images/shopping-cart.png"/>
+            <BarItem urlpath='/order/myorder' icontype="주문 내역" imgpath="/images/shopping-cart.png"/>
         </Navbar>
     );
 }

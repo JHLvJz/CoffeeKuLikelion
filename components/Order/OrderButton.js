@@ -10,12 +10,14 @@ const OrderButtonBox = styled.div`
     width: 326px;
     height: 43px;
     
-    top: 180px;
+    top: ${ props=> props.top || '180px'};
     left: 50%; transform: translate(-50%, -50%); 
 
     // background-color: ${props => props.isSelect ? '#9E6027' : '#9E602785'};
     background-color: '#9E6027';
     border-radius: 20px;
+
+    font-weight: 600;
 `;
 const OrderText = styled.p`
     position: absolute;
@@ -24,9 +26,8 @@ const OrderText = styled.p`
     color: white;
 
     
-    font-size = 18px;
-    font-weight = 600;
-
+    font-size: 18px;
+    font-weight: 600;
 `;
 
 function OrderButton ({ urlpath }) {
